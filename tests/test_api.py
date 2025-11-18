@@ -28,3 +28,4 @@ def test_register(client):
         'account_status': 'active'
     })
     assert response.status_code == 201
+    assert b"User registered" in response.data
