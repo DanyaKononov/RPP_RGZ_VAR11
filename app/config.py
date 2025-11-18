@@ -1,10 +1,11 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # Загружаем переменные из .env
+load_dotenv()
 
 class Config:
     SECRET_KEY = os.getenv('SECRET_KEY', 'dev')
-    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'sqlite:///app.db')
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'sqlite:///app.db')  # Резерв: SQLite
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
 
