@@ -27,5 +27,6 @@ def test_register(client):
         'subscription_level': 'basic',
         'account_status': 'active'
     })
-    assert response.status_code == 201
-    assert b"User registered" in response.data
+    assert response.status_code == 201  # nosec
+    assert b"User registered" in response.data  # nosec
+
